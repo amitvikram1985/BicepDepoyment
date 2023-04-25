@@ -58,6 +58,6 @@ stages:
           az deployment group create \
             --name $(Build.BuildNumber) \
             --resource-group rg-ae-platform-dev \
-            --template-file $(System.ArtifactsDirectory)/drop/main.bicep \
-            --parameters @$(System.ArtifactsDirectory)/drop/main.parameters.json \
+            --template-file $(System.ArtifactsDirectory)/drop/storage-sample.bicep \
+            --parameters @$(System.ArtifactsDirectory)/drop/storage-sample.parameters.json \
             --parameters location='australiaeast'
