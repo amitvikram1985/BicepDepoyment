@@ -50,14 +50,14 @@ stages:
     - task: AzureCLI@2
       displayName: 'Deploy Bicep file'
       inputs:
-        azureSubscription: 'MyAzureSubscription'
+        azureSubscription: 'amitpayasgo'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
           # Deploying Bicep file
           az deployment group create \
             --name $(Build.BuildNumber) \
-            --resource-group rg-bicep \
+            --resource-group rg-ae-platform-dev \
             --template-file $(System.ArtifactsDirectory)/drop/main.bicep \
             --parameters @$(System.ArtifactsDirectory)/drop/main.parameters.json \
             --parameters location='australiaeast'
