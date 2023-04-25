@@ -21,7 +21,7 @@ stages:
     - task: CopyFiles@2
       displayName: 'Include templates in the artifact'
       inputs:
-        SourceFolder: 'src'
+#         SourceFolder: 'src'
         Contents: |
           storage-sample.bicep
           storage-sample.parameters.json
