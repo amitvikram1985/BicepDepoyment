@@ -13,7 +13,7 @@ parameters:
 - name: environment
   displayName: Where to deploy?
   type: string
-  #default: dev
+  default: dev
   values:
   - dev
   - preprod
